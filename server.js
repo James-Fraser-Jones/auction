@@ -33,7 +33,7 @@ function start() {
     banUpperCase("./public/", "");
     var service = http.createServer(handle);
     //service.listen(port, "localhost");
-    service.listen(.listen(process.env.PORT || port)); //removed requirement for localhost requests
+    service.listen(process.env.PORT || port); //removed requirement for localhost requests
     var address = "http://localhost";
     if (port != 80) address = address + ":" + port;
     console.log("Server running at", address);
